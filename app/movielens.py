@@ -98,7 +98,7 @@ class MovieLens:
     @staticmethod
     def load_movies():
         movies = dict()
-        with open('./ml-latest-small/movies-clean.csv', 'rt') as moviesFile:
+        with open('./ml-latest-small/movies-clean.csv', 'rt', encoding='UTF-8') as moviesFile:
             raw_movies = csv.reader(moviesFile, delimiter=',')
             is_first = True
             for movie in raw_movies:
@@ -112,7 +112,7 @@ class MovieLens:
     @staticmethod
     def load_ratings():
         ratings = []
-        with open('./ml-latest-small/ratings.csv', 'rt') as ratingsFile:
+        with open('./ml-latest-small/ratings.csv', 'rt', encoding='UTF-8') as ratingsFile:
             raw_ratings = csv.reader(ratingsFile, delimiter=',')
             is_first = True
             for rating in raw_ratings:
@@ -127,7 +127,7 @@ class MovieLens:
     @staticmethod
     def load_simplified_ratings():
         ratings = []
-        with open('./ml-latest-small/ratings-popular-simplified.csv', 'rt') as ratingsFile:
+        with open('./ml-latest-small/ratings-popular-simplified.csv', 'rt', encoding='UTF-8') as ratingsFile:
             raw_ratings = csv.reader(ratingsFile, delimiter=',')
             is_first = True
             for rating in raw_ratings:
